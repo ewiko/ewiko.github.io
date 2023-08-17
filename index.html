@@ -7,8 +7,8 @@
     <link rel="icon" href="https://i.ibb.co/4StMCtC/57605988.png">
     <style>
         body {
-            background-color: #222;
-            color: #fff;
+            background-color: #1a1a1a;
+            color: #ffffff;
             font-family: Arial, sans-serif;
         }
         header {
@@ -16,17 +16,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
-            background-color: #1e1e1e;
+            background-color: #111111;
         }
         .dropdown {
             position: relative;
             display: inline-block;
         }
         .dropbtn {
-            background-color: #1e1e1e;
+            background-color: #111111;
             border: none;
             color: white;
-            font-size: 16px;
+            font-size: 18px;
             cursor: pointer;
             padding: 10px 15px;
             border-radius: 5px;
@@ -34,7 +34,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #1e1e1e;
+            background-color: #111111;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
@@ -52,6 +52,11 @@
         .dropdown-content a:hover {
             background-color: #007bff;
         }
+        .dropdown-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
         .featured-games {
             display: flex;
             flex-wrap: wrap;
@@ -66,23 +71,24 @@
             text-decoration: none;
         }
         .game img {
-            width: 120px;
-            height: 120px;
-            border-radius: 15px;
-            border: 3px solid #007bff;
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
         }
         .game h2 {
             margin: 10px 0;
-            font-size: 18px;
+            font-size: 20px;
+            color: #ffffff;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #1e1e1e;
+            background-color: #111111;
         }
         footer p {
             margin: 0;
             font-size: 14px;
+            color: #ffffff;
         }
     </style>
 </head>
@@ -92,7 +98,7 @@
             <img src="https://i.ibb.co/4StMCtC/57605988.png" alt="Ewiko Logo" style="width: 50px; height: 50px;">
         </a>
         <div class="dropdown">
-            <button class="dropbtn">Games</button>
+            <button class="dropbtn">Games <img src="https://i.ibb.co/F7dmvg2/Untitled-design-2.png" alt="Dropdown Icon" class="dropdown-icon"></button>
             <div class="dropdown-content">
                 <a href="https://www.ewiko.store/Cube-Wall-Game/">Cube Wall</a>
             </div>
