@@ -63,6 +63,25 @@
                 transform: translateY(-20px);
             }
         }
+
+        /* New styles for bouncing Cube Wall */
+        .bouncing-cubewall {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            50% {
+                transform: translateY(-20px) translateX(20px);
+            }
+        }
+
+        
     </style>
 </head>
 <body>
@@ -102,6 +121,46 @@
             <h2>SimulSound</h2>
         </div>
     </section>
+
+
+ <div class="bouncing-cubewall" id="bouncing-cubewall">
+        <img src="https://i.ibb.co/gRwC9j8/IMG-1343.png" alt="Cube Wall Icon">
+    </div>
+
+    <script>
+        // JavaScript to move and detect collision of bouncing Cube Wall
+        const cubewall = document.getElementById('bouncing-cubewall');
+        const gameEntries = document.querySelectorAll('.game');
+
+        function isColliding(element) {
+            const cubewallRect = cubewall.getBoundingClientRect();
+            const elementRect = element.getBoundingClientRect();
+
+            return (
+                cubewallRect.left < elementRect.right &&
+                cubewallRect.right > elementRect.left &&
+                cubewallRect.top < elementRect.bottom &&
+                cubewallRect.bottom > elementRect.top
+            );
+        }
+
+        function stopBouncing() {
+            cubewall.style.animation = 'none';
+        }
+
+        function checkCollisions() {
+            gameEntries.forEach(gameEntry => {
+                if (isColliding(gameEntry)) {
+                    stopBouncing();
+                }
+            });
+        }
+
+        setInterval(checkCollisions, 100); // Check collisions every 100ms
+    </script>
+
+
+    
     <footer>
         <p>&copy; 2023 Ewiko. All rights reserved.</p>
     </footer>
