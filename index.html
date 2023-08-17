@@ -4,20 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ewiko - Games and Apps</title>
-     <link rel="icon" href="https://i.ibb.co/4StMCtC/57605988.png">
+    <link rel="icon" href="https://i.ibb.co/4StMCtC/57605988.png">
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background-color: #1e1e1e;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1e1e1e;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+        }
+        .dropdown-content a:hover {
+            background-color: #007bff;
+        }
+        .featured-games {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .game {
+            margin: 10px;
+            text-align: center;
+        }
+        .game a {
+            text-decoration: none;
+        }
+        .game img {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            border: 3px solid #007bff;
+        }
+        .game h2 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e1e;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
-  <body style="background-color: #f3f3f3; color: #333; font-family: Arial, sans-serif;">
-   <header style="display: flex; align-items: center; padding: 20px; background-color: #007bff;">
-        <div class="dropdown" style="position: relative;">
-            <button class="dropbtn" style="background-color: #007bff; border: none; color: white; font-size: 16px; cursor: pointer;">Games</button>
-            <div class="dropdown-content" style="position: absolute; display: none; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;">
+<body>
+    <header>
+        <a href="https://www.ewiko.store/Cube-Wall-Game/">
+            <img src="https://i.ibb.co/4StMCtC/57605988.png" alt="Ewiko Logo" style="width: 50px; height: 50px;">
+        </a>
+        <div class="dropdown">
+            <button class="dropbtn">Games</button>
+            <div class="dropdown-content">
                 <a href="https://www.ewiko.store/Cube-Wall-Game/">Cube Wall</a>
             </div>
         </div>
-        <img src="https://i.ibb.co/4StMCtC/57605988.png" alt="Ewiko Logo" style="width: 50px; height: 50px; margin-right: 10px;">
-        <h1 style="margin: 0; font-size: 24px;">Games and Apps by Ewiko</h1>
     </header>
-    <section class="featured-games" style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px;">
+    <section class="featured-games">
         <div class="game" style="margin: 10px; text-align: center;">
             <a href="https://play.google.com/store/apps/details?id=com.Ewiko.CubeWallRumble">
                 <img src="https://i.ibb.co/gRwC9j8/IMG-1343.png" alt="Cube Wall Icon" style="width: 80px; height: 80px; border-radius: 10px;">
